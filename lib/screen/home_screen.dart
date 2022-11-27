@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:netplix_clone/model/model_movie.dart';
+import 'package:netplix_clone/widget/carousel_slider.dart';
 
 class HomeScreen extends StatefulWidget {
   _HomeScreenState createState() => _HomeScreenState();
@@ -23,7 +24,17 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return TopBar();
+    return ListView(
+      children: <Widget>[
+        // 순서 대로 스택
+        Stack(
+          children: <Widget>[
+            CarouselImage(movies: movies),
+            TopBar(),
+          ],
+        ),
+      ],
+    );
   }
 }
 
