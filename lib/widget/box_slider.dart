@@ -43,7 +43,7 @@ List<Widget> makeBoxImages(BuildContext context, List<Movie> movies) {
         padding: EdgeInsets.fromLTRB(0, 0, 10, 0),
         child: Align(
           alignment: Alignment.centerLeft,
-          child: Image.asset('images/' + movies[i].poster),
+          child: Image.network(movies[i].poster),
         ),
       ),
     ));

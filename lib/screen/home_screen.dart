@@ -10,64 +10,43 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  // 생성한 model에 List 데이터 저장
-  List<Movie> movies = [
-    Movie.fromMap({
-      'title': '사랑의 불시착',
-      'keyword': '사랑/로맨스/판타지',
-      'poster': 'test_movie_1.png',
-      'like': false
-    }),
-    Movie.fromMap({
-      'title': '사랑의 불시착',
-      'keyword': '사랑/로맨스/판타지',
-      'poster': 'test_movie_1.png',
-      'like': false
-    }),
-    Movie.fromMap({
-      'title': '사랑의 불시착',
-      'keyword': '사랑/로맨스/판타지',
-      'poster': 'test_movie_1.png',
-      'like': false
-    }),
-    Movie.fromMap({
-      'title': '사랑의 불시착',
-      'keyword': '사랑/로맨스/판타지',
-      'poster': 'test_movie_1.png',
-      'like': false
-    }),
-    Movie.fromMap({
-      'title': '사랑의 불시착',
-      'keyword': '사랑/로맨스/판타지',
-      'poster': 'test_movie_1.png',
-      'like': false
-    }),
-  ];
-// FirebaseFirestore firebaseFirestore = FirebaseFirestore.instance;
-// late Stream<QuerySnapshot> streamData;
+  // firebase 연동
+  FirebaseFirestore firebaseFirestore = FirebaseFirestore.instance;
+  late Stream<QuerySnapshot> streamData;
+
   @override
   void initState() {
     super.initState();
+    // movie 테이블 데이터 저장
+    streamData = firebaseFirestore.collection('movie').snapshots();
+  }
+
+  // 데이터 fetch
+  Widget _fetchData(BuildContext context) {
+    return StreamBuilder<QuerySnapshot>(
+        stream: FirebaseFirestore.instance.collection('movie').snapshots(),
+        builder: (context, snapshot) {
+          if (!snapshot.hasData) {
+            return LinearProgressIndicator();
+          }
+          return _buildBody(context, snapshot.data!.docs);
+        });
+  }
+
+  Widget _buildBody(BuildContext context, List<DocumentSnapshot> snapshot) {
+    List<Movie> movies = snapshot.map((d) => Movie.fromSnapshot(d)).toList();
+    return ListView(children: [
+      Stack(
+        children: [CarouselImage(movies: movies), TopBar()],
+      ),
+      CircleSlider(movies: movies),
+      BoxSlider(movies: movies)
+    ]);
   }
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      children: <Widget>[
-        // 순서 대로 스택
-        // 스택 1 구간
-        Stack(
-          children: <Widget>[
-            CarouselImage(movies: movies),
-            TopBar(),
-          ],
-        ),
-        // 스택 2 구간
-        CircleSlider(movies: movies),
-        // 스택 3 구간
-        BoxSlider(movies: movies),
-      ],
-    );
+    return _fetchData(context);
   }
 }
 

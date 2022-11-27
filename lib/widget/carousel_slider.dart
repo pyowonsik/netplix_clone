@@ -23,7 +23,7 @@ class _CarouselImageState extends State<CarouselImage> {
     super.initState();
     movies = widget.movies;
     // Movie 리스트 정보를 들어온 movies를 이용하여 찾음
-    images = movies?.map((m) => Image.asset('./images/' + m.poster)).toList();
+    images = movies?.map((m) => Image.network(m.poster)).toList();
     keywords = movies?.map((m) => m.keyword).cast<String>().toList();
     likes = movies?.map((m) => m.like).cast<bool>().toList();
     _currentKeyword = keywords![0];
