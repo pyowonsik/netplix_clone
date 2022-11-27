@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:netplix_clone/model/model_movie.dart';
+import 'package:netplix_clone/widget/box_slider.dart';
 import 'package:netplix_clone/widget/carousel_slider.dart';
+import 'package:netplix_clone/widget/circle_slider.dart';
 
 class HomeScreen extends StatefulWidget {
   _HomeScreenState createState() => _HomeScreenState();
@@ -14,7 +16,31 @@ class _HomeScreenState extends State<HomeScreen> {
       'keyword': '사랑/로맨스/판타지',
       'poster': 'test_movie_1.png',
       'like': false
-    })
+    }),
+    Movie.fromMap({
+      'title': '사랑의 불시착',
+      'keyword': '사랑/로맨스/판타지',
+      'poster': 'test_movie_1.png',
+      'like': false
+    }),
+    Movie.fromMap({
+      'title': '사랑의 불시착',
+      'keyword': '사랑/로맨스/판타지',
+      'poster': 'test_movie_1.png',
+      'like': false
+    }),
+    Movie.fromMap({
+      'title': '사랑의 불시착',
+      'keyword': '사랑/로맨스/판타지',
+      'poster': 'test_movie_1.png',
+      'like': false
+    }),
+    Movie.fromMap({
+      'title': '사랑의 불시착',
+      'keyword': '사랑/로맨스/판타지',
+      'poster': 'test_movie_1.png',
+      'like': false
+    }),
   ];
 
   @override
@@ -27,12 +53,16 @@ class _HomeScreenState extends State<HomeScreen> {
     return ListView(
       children: <Widget>[
         // 순서 대로 스택
+        // 스택 1 구간
         Stack(
           children: <Widget>[
             CarouselImage(movies: movies),
             TopBar(),
           ],
         ),
+        // 스택 2 구간
+        CircleSlider(movies: movies),
+        BoxSlider(movies: movies),
       ],
     );
   }
