@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:netplix_clone/model/model_movie.dart';
 import 'package:netplix_clone/widget/box_slider.dart';
@@ -42,7 +43,8 @@ class _HomeScreenState extends State<HomeScreen> {
       'like': false
     }),
   ];
-
+// FirebaseFirestore firebaseFirestore = FirebaseFirestore.instance;
+// late Stream<QuerySnapshot> streamData;
   @override
   void initState() {
     super.initState();
