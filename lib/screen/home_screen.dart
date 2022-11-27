@@ -9,7 +9,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  // movie data
+  // 생성한 model에 List 데이터 저장
   List<Movie> movies = [
     Movie.fromMap({
       'title': '사랑의 불시착',
@@ -62,6 +62,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         // 스택 2 구간
         CircleSlider(movies: movies),
+        // 스택 3 구간
         BoxSlider(movies: movies),
       ],
     );
