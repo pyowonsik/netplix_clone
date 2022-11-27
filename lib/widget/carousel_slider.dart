@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:netplix_clone/model/model_movie.dart';
+import 'package:netplix_clone/screen/detail_screen.dart';
 
 class CarouselImage extends StatefulWidget {
   final List<Movie>? movies;
@@ -21,7 +22,7 @@ class _CarouselImageState extends State<CarouselImage> {
   void initState() {
     super.initState();
     movies = widget.movies;
-    // Movie 리스트 정보
+    // Movie 리스트 정보를 들어온 movies를 이용하여 찾음
     images = movies?.map((m) => Image.asset('./images/' + m.poster)).toList();
     keywords = movies?.map((m) => m.keyword).cast<String>().toList();
     likes = movies?.map((m) => m.like).cast<bool>().toList();
@@ -98,7 +99,14 @@ class _CarouselImageState extends State<CarouselImage> {
                   child: Column(
                     children: <Widget>[
                       IconButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context).push(MaterialPageRoute<Null>(
+                              builder: (BuildContext context) {
+                            return DetailScreen(
+                              movie: movies![_currentPage],
+                            );
+                          }));
+                        },
                         icon: Icon(Icons.info),
                       ),
                       Text("정보", style: TextStyle(fontSize: 11)),
