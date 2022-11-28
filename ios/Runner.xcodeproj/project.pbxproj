@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		05F26636C08D66C6C525563A /* Pods_Runner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11B40ECD74E7184AB5BDD7E1 /* Pods_Runner.framework */; };
+		0B2FB7CC2934E84100FB94C9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B2FB7CB2934E84100FB94C9 /* GoogleService-Info.plist */; };
 		0BB9B45E29337698003DCE2B /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 0BB9B45D29337698003DCE2B /* Algorithms */; };
-		0BB9B46029337B48003DCE2B /* GoogleService-Info .plist in Resources */ = {isa = PBXBuildFile; fileRef = 0BB9B45F29337B47003DCE2B /* GoogleService-Info .plist */; };
 		1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */ = {isa = PBXBuildFile; fileRef = 1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */; };
 		3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */; };
 		74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74858FAE1ED2DC5600515810 /* AppDelegate.swift */; };
@@ -32,7 +32,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0BB9B45F29337B47003DCE2B /* GoogleService-Info .plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info .plist"; path = "../../../../Downloads/GoogleService-Info .plist"; sourceTree = "<group>"; };
+		0B2FB7CB2934E84100FB94C9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		11B40ECD74E7184AB5BDD7E1 /* Pods_Runner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Runner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1498D2321E8E86230040F4C2 /* GeneratedPluginRegistrant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneratedPluginRegistrant.h; sourceTree = "<group>"; };
 		1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneratedPluginRegistrant.m; sourceTree = "<group>"; };
@@ -98,7 +98,7 @@
 		97C146F01CF9000F007C117D /* Runner */ = {
 			isa = PBXGroup;
 			children = (
-				0BB9B45F29337B47003DCE2B /* GoogleService-Info .plist */,
+				0B2FB7CB2934E84100FB94C9 /* GoogleService-Info.plist */,
 				97C146FA1CF9000F007C117D /* Main.storyboard */,
 				97C146FD1CF9000F007C117D /* Assets.xcassets */,
 				97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */,
@@ -118,7 +118,6 @@
 				5CA4EAB3E04A2ABF8F0E52B4 /* Pods-Runner.release.xcconfig */,
 				467CDA8D41948E410A27B9BA /* Pods-Runner.profile.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -182,7 +181,7 @@
 			);
 			mainGroup = 97C146E51CF9000F007C117D;
 			packageReferences = (
-				0BB9B45C29337698003DCE2B /* XCRemoteSwiftPackageReference "swift-algorithms.git" */,
+				0BB9B45C29337698003DCE2B /* XCRemoteSwiftPackageReference "swift-algorithms" */,
 				0BB9B46129337BFE003DCE2B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 97C146EF1CF9000F007C117D /* Products */;
@@ -199,9 +198,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BB9B46029337B48003DCE2B /* GoogleService-Info .plist in Resources */,
 				97C147011CF9000F007C117D /* LaunchScreen.storyboard in Resources */,
 				3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */,
+				0B2FB7CC2934E84100FB94C9 /* GoogleService-Info.plist in Resources */,
 				97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */,
 				97C146FC1CF9000F007C117D /* Main.storyboard in Resources */,
 			);
@@ -352,6 +351,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
+				DEVELOPMENT_TEAM = J26F9UUXYM;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Runner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -482,6 +482,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
+				DEVELOPMENT_TEAM = J26F9UUXYM;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Runner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -504,6 +505,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
+				DEVELOPMENT_TEAM = J26F9UUXYM;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Runner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -544,7 +546,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		0BB9B45C29337698003DCE2B /* XCRemoteSwiftPackageReference "swift-algorithms.git" */ = {
+		0BB9B45C29337698003DCE2B /* XCRemoteSwiftPackageReference "swift-algorithms" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/apple/swift-algorithms.git";
 			requirement = {
@@ -565,7 +567,7 @@
 /* Begin XCSwiftPackageProductDependency section */
 		0BB9B45D29337698003DCE2B /* Algorithms */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 0BB9B45C29337698003DCE2B /* XCRemoteSwiftPackageReference "swift-algorithms.git" */;
+			package = 0BB9B45C29337698003DCE2B /* XCRemoteSwiftPackageReference "swift-algorithms" */;
 			productName = Algorithms;
 		};
 /* End XCSwiftPackageProductDependency section */

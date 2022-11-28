@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "1050523682496",
+    "project_id": "netplixclone",
+    "storage_bucket": "netplixclone.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1050523682496:android:6890993040d6def43f0f25",
+        "android_client_info": {
+          "package_name": "wspyo.netplix_clone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1050523682496-5spi938lhlh8r4fkp5dn7tn8o9fgtitm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAKx6Mswwl4Z6ftJfr5TdiyJjZdvT11gc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1050523682496-5spi938lhlh8r4fkp5dn7tn8o9fgtitm.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1050523682496-ga29opokee7vdhluoltgjefc0iu2biqk.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "wspyo.netplixClone"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
