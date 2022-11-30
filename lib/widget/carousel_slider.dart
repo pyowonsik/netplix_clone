@@ -70,6 +70,7 @@ class _CarouselImageState extends State<CarouselImage> {
                               onPressed: () {
                                 setState(() {
                                   likes![_currentPage] = !likes![_currentPage];
+                                  // todo : 찜하기 기능
                                   // movies![_currentPage]
                                   // .reference
                                   // .set({'like': likes![_currentPage]});
