@@ -43,6 +43,7 @@ class _CarouselImageState extends State<CarouselImage> {
               onPageChanged: (index, reason) {
                 setState(
                   () {
+                    //
                     _currentPage = index;
                     _currentKeyword = keywords![_currentPage];
                   },
@@ -66,8 +67,25 @@ class _CarouselImageState extends State<CarouselImage> {
                     children: <Widget>[
                       likes![_currentPage]
                           ? IconButton(
-                              onPressed: () {}, icon: Icon(Icons.check))
-                          : IconButton(onPressed: () {}, icon: Icon(Icons.add)),
+                              onPressed: () {
+                                setState(() {
+                                  likes![_currentPage] = !likes![_currentPage];
+                                  // movies![_currentPage]
+                                  // .reference
+                                  // .set({'like': likes![_currentPage]});
+                                });
+                              },
+                              icon: Icon(Icons.check))
+                          : IconButton(
+                              onPressed: () {
+                                setState(() {
+                                  likes![_currentPage] = !likes![_currentPage];
+                                  // movies![_currentPage]
+                                  // .reference
+                                  // .set({'like': likes![_currentPage]});
+                                });
+                              },
+                              icon: Icon(Icons.add)),
                       Text(
                         '내가 찜한 콘텐츠',
                         style: TextStyle(fontSize: 11),

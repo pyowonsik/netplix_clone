@@ -26,6 +26,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return StreamBuilder<QuerySnapshot>(
         stream: FirebaseFirestore.instance.collection('movie').snapshots(),
         builder: (context, snapshot) {
+          // 데이가 없다면
           if (!snapshot.hasData) {
             return LinearProgressIndicator();
           }
@@ -33,7 +34,9 @@ class _HomeScreenState extends State<HomeScreen> {
         });
   }
 
+  // 데이터를 이용한 위젯(리스트뷰)
   Widget _buildBody(BuildContext context, List<DocumentSnapshot> snapshot) {
+    // movie의 더미 데이터
     List<Movie> movies = snapshot.map((d) => Movie.fromSnapshot(d)).toList();
     return ListView(children: [
       Stack(
