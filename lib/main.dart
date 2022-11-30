@@ -2,7 +2,9 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:netplix_clone/firebase_options.dart';
 import 'package:netplix_clone/screen/home_screen.dart';
+import 'package:netplix_clone/screen/like_screen.dart';
 import 'package:netplix_clone/screen/more_screen.dart';
+import 'package:netplix_clone/screen/search_screen.dart';
 import 'package:netplix_clone/widget/bottom_bar.dart';
 
 // void main() => runApp(MyApp());
@@ -40,16 +42,8 @@ class _MyAppState extends State<MyApp> {
             physics: NeverScrollableScrollPhysics(),
             children: <Widget>[
               HomeScreen(),
-              Container(
-                child: Center(
-                  child: Text('search'),
-                ),
-              ),
-              Container(
-                child: Center(
-                  child: Text('save'),
-                ),
-              ),
+              SearchScreen(),
+              LikeScreen(),
               MoreScreen(),
             ],
           ),
